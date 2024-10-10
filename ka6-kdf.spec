@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.1
+%define		kdeappsver	24.08.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kdf
 Summary:	KDE free disk space utility
 Name:		ka6-%{kaname}
-Version:	24.08.1
+Version:	24.08.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2b050ef60a60d7d4841b4470c0adbebe
+# Source0-md5:	4770dddaa021b15d429da3559fbfc50c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
