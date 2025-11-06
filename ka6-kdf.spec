@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	6.3
 %define		qtver		6.5.0
 %define		kaname		kdf
 Summary:	KDE free disk space utility
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	cc381a941cd5d0e8c50a4f046963d2ed
+# Source0-md5:	33239d70f1773cd6d9967dd3507519ed
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -93,11 +93,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kdf
 %attr(755,root,root) %{_bindir}/kwikdisk
 %ghost %{_libdir}/libkdfprivate.so.2?
-%attr(755,root,root) %{_libdir}/libkdfprivate.so.*.*
+%{_libdir}/libkdfprivate.so.*.*
 %{_desktopdir}/org.kde.kdf.desktop
 %{_desktopdir}/org.kde.kwikdisk.desktop
 %{_iconsdir}/hicolor/*x*/apps/*.png
 %{_datadir}/metainfo/org.kde.kdf.appdata.xml
 %{_datadir}/qlogging-categories6/kdf.categories
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kdf.so
 %{_desktopdir}/kcm_kdf.desktop
